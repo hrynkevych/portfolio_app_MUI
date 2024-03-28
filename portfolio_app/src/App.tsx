@@ -1,11 +1,13 @@
 import "./App.css";
-import { MenuAppBar } from "./components/app-bar/AppBar";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MenuAppBar />
+        <Header />
+        
+
       </header>
       <body></body>
     </div>
