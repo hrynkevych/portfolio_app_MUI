@@ -1,4 +1,4 @@
-import React from 'react';
+// Add animation
 import styled from 'styled-components';
 import Header from "./components/header/Header";
 import Video from "./components/video/Video";
