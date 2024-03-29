@@ -1,11 +1,26 @@
 import * as React from 'react';
 import { ReactElement  } from 'react';
+import { styled } from '@mui/system';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
+
+const StyledAppBar = styled(AppBar)`
+  background-color: #6B5B95;
+`;
+
+const StyledToolbar = styled(Toolbar)`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledTypography = styled(Typography)`
+  flex-grow: 1;
+  text-align: left;
+`;
 
 function HideOnScroll({ children }: { children: ReactElement  }) {
   const trigger = useScrollTrigger();
@@ -22,13 +37,13 @@ export default function HideAppBar() {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll>
-        <AppBar>
-          <Toolbar>
-            <Typography variant="h6" component="div">
-              Scroll to hide App bar
-            </Typography>
-          </Toolbar>
-        </AppBar>
+        <StyledAppBar>
+          <StyledToolbar>
+            <StyledTypography variant="h1" as="div">
+              Mykhailo Hrynkevych
+            </StyledTypography>
+          </StyledToolbar>
+        </StyledAppBar>
       </HideOnScroll>
     </React.Fragment>
   );
